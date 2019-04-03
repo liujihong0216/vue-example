@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+    <te id="warp">
+            <div class="my-divOne">
+                <textarea 
+                        class="warp-div"
+                        v-model="textareaValue"
+                >
+                    
+                </textarea>
+            </div>
+            <div class="my-divTwo">
+                <button type="button" 
+                        class="my-button"
+                        @click = "handleButton"
+
+                >
+                    {{ handleMybutton }}
+                </button>
+            </div>
+
+            <!-- 提示框 -->
+            <div 
+                class="my-hide-div"
+                v-if="flag"
+            >
+                <div class="cover"></div>
+                    <div class="modal" >
+                        <div class="my-tiShi">
+                            <p class="my-pp">
+                                {{ myTishi }}
+                            </p>   
+                        </div>
+                        <div class="my-pop-up-text">
+                            <p class="my-p">
+                                {{ textareaValue }}
+                            </p>
+                        </div>
+                        <div class="my-div">
+                            <div 
+                                class="my-pop-up-yes"
+                                @click = "handleYes"
+                            >
+                                {{ handleTrue }}
+                            </div>
+                            <div 
+                                class="my-pop-up-yes"
+                                @click = "handleNo"
+                            >
+                                {{ handleClose }}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div 
+                class="my-hide-div"
+                v-if="flagTwo"
+            >
+                <div class="cover"></div>
+                    <div class="modal" >
+                        <div class="my-tiShi">
+                            <p class="my-pp">
+                                {{ myTishi }}
+                            </p>   
+                        </div>
+                        <div class="my-pop-up-text">
+                            <p class="my-p">
+                                {{ textareaValueTwo }}
+                            </p>
+                        </div>
+                        <div class="my-div">
+                            <div 
+                                class="my-pop-up-yes"
+                                @click = "handleYestwo"
+                            >
+                                {{ handleTrue }}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+
+
+</body>
+<script src="js/vue.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
